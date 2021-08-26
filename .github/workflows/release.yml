@@ -28,12 +28,21 @@ jobs:
       - run: |
           ls ${{ github.workspace }}
       - name: Create Release
-        uses: "marvinpinto/action-automatic-releases@latest"
+        uses: softprops/action-gh-release@v1
         with:
-          repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          automatic_release_tag: latest
-          prerelease: true
-          title: Release ${{ steps.date.outputs.date }}
           files: |
             MQLBetterSyntax.mqh
+          body_path: "readme.md"
+          token: ${{ secrets.GITHUB_TOKEN }}
+          tag_name: latest
+          name: Release - ${{ steps.date.outputs.date }}
+          prerelease: true
+        # uses: "marvinpinto/action-automatic-releases@latest"
+        # with:
+        #   repo_token: "${{ secrets.GITHUB_TOKEN }}"
+        #   automatic_release_tag: latest
+        #   prerelease: true
+        #   title: Release ${{ steps.date.outputs.date }}
+        #   files: |
+        #     MQLBetterSyntax.mqh
       - run: echo "🍏 This job's status is ${{ job.status }}."
