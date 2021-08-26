@@ -23,6 +23,7 @@ jobs:
         with:
           files: |
             MQLBetterSyntax.mqh
+          body: release note
           body_path: "CHANGELOG.md"
           token: ${{ secrets.GITHUB_TOKEN }}
           tag_name: latest
