@@ -1,5 +1,3 @@
-# 2021-08-26
+# 2021-08-27
 
-- added Market info functions
-- added build script
-- created Github action
+- add Predefined Macro Substitutions
