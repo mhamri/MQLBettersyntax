@@ -33,7 +33,7 @@ jobs:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           automatic_release_tag: "latest"
           prerelease: true
-          title: "Development Build"
+          title: Release ${{ steps.date.outputs.date }}
           files: |
             MQLBetterSyntax.mqh
       - run: echo "🍏 This job's status is ${{ job.status }}."
