@@ -10,18 +10,9 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v2
       - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
-      - run: echo "🖥️ The workflow is now ready to test your code on the runner."
-      - name: List files in the repository
-        run: |
-          ls ${{ github.workspace }}
       - name: Get current date
         id: date
         run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
-      - name: Test with environment variables
-        run: echo $TAG_NAME - $RELEASE_NAME
-        env:
-          TAG_NAME: nightly-tag-${{ steps.date.outputs.date }}
-          RELEASE_NAME: nightly-release-${{ steps.date.outputs.date }}
       - name: build mqh file
         run: .\build.ps1
         shell: pwsh
@@ -35,14 +26,6 @@ jobs:
           body_path: "README.md"
           token: ${{ secrets.GITHUB_TOKEN }}
           tag_name: latest
-          name: Release - ${{ steps.date.outputs.date }}
+          name: Release ${{ steps.date.outputs.date }}
           prerelease: true
-        # uses: "marvinpinto/action-automatic-releases@latest"
-        # with:
-        #   repo_token: "${{ secrets.GITHUB_TOKEN }}"
-        #   automatic_release_tag: latest
-        #   prerelease: true
-        #   title: Release ${{ steps.date.outputs.date }}
-        #   files: |
-        #     MQLBetterSyntax.mqh
       - run: echo "🍏 This job's status is ${{ job.status }}."
