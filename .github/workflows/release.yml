@@ -20,10 +20,12 @@ jobs:
       - run: |
           ls ${{ github.workspace }}
       - name: Create Release
-        uses: ncipollo/release-action@v1
+        uses: "marvinpinto/action-automatic-releases@latest"
         with:
-          artifacts: "MQLBetterSyntax.mqh"
-          bodyFile: "Readme.md"
-          token: ${{ secrets.GITHUB_TOKEN }}
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: "latest"
           prerelease: true
+          title: "Development Build"
+          files: |
+            MQLBetterSyntax.mqh
       - run: echo "🍏 This job's status is ${{ job.status }}."
