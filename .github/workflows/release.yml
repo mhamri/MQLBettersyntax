@@ -1,7 +1,7 @@
 name: Release
 on: [push]
 jobs:
-  Explore-GitHub-Actions:
+  Build:
     runs-on: ubuntu-latest
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
@@ -19,4 +19,11 @@ jobs:
         shell: pwsh
       - run: |
           ls ${{ github.workspace }}
+      - name: Create Release
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: "MQLBetterSyntax.mqh"
+          bodyFile: "Readme.md"
+          token: ${{ secrets.GITHUB_TOKEN }}
+          prerelease: true
       - run: echo "🍏 This job's status is ${{ job.status }}."
