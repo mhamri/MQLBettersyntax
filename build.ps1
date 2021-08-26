@@ -60,6 +60,19 @@ try {
     Set-Location "./src"
     $sb = [System.Text.StringBuilder]::new()
     [void]$sb.Append("
+/**
+ * @author Mohammad Hossein Amri (mhamri.com)
+ * 
+ * @file MQLBetterSyntax.mqh
+ * @date $(Get-Date -Format "yyyy-MM-d")
+ * 
+ * @brief an attempt to document MQL4(MT4) API 
+ * 			for latest version please visit https://github.com/mhamri/MQLBettersyntax
+ * 
+ * @copyright Copyright (c) 2021 Mohammad Hossein Amri
+ * @copydoc https://raw.githubusercontent.com/mhamri/MQLBettersyntax/main/LICENSE
+ */
+
 #include <iostream>
 using namespace std;
 `n")
