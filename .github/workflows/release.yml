@@ -32,7 +32,7 @@ jobs:
         with:
           files: |
             MQLBetterSyntax.mqh
-          body_path: "readme.md"
+          body_path: "README.md"
           token: ${{ secrets.GITHUB_TOKEN }}
           tag_name: latest
           name: Release - ${{ steps.date.outputs.date }}
