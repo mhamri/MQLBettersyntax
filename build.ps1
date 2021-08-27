@@ -12,13 +12,13 @@ function Get-FilesContent ($directory) {
     $files = Get-ChildItem $directory -Filter "*.h"
 
     foreach ($file in $files) {
-        $fileContet = (Get-Content $file -Raw) -replace "(\s*`r?`n){2}", $([Environment]::Newline) -replace "#include <iostream>", "" -replace "using namespace std;", ""
+        $fileContet = (Get-Content $file -Raw) -replace "#include <.*>", "" -replace "#include .*", "" -replace "using namespace std;", ""
 
         [void]$sb.Append($fileContet)
         [void]$sb.Append("`n")
     }
     
-    return $sb.ToString()
+    return $sb.ToString() 
     
 }
 
@@ -35,7 +35,8 @@ function Recurse-Folder($folder) {
         Write-Information "creating namespace for $directory"
 
         if ($hasNamespace) {
-            [void]$sb.Append("namespace $namespace{`n")
+            [void]$sb.Append("namespace $namespace`n")
+            [void]$sb.Append("{`n")
         }
 
         $childContent = Recurse-Folder $directory
@@ -79,7 +80,7 @@ using namespace std;
 
     [void]$sb.Append((Recurse-Folder "." | Out-String)) 
 
-    $sb.ToString() | Set-Content "..\MQLBetterSyntax.mqh"
+    $sb.ToString().Trim() -replace "\s+`r?`n\s+`r?`n", "`n`n" | Set-Content "..\MQLBetterSyntax.mqh"
 }
 catch {
     

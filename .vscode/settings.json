@@ -3,6 +3,24 @@
     "*.mqh": "cpp",
     "*.mq4": "cpp",
     "*.mq5": "cpp",
-    "xstring": "cpp"
-  }
+    "xstring": "cpp",
+    "iostream": "cpp"
+  },
+  "workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#822308",
+    "activityBar.activeBorder": "#000000",
+    "activityBar.background": "#822308",
+    "activityBar.foreground": "#e7e7e7",
+    "activityBar.inactiveForeground": "#e7e7e799",
+    "activityBarBadge.background": "#000000",
+    "activityBarBadge.foreground": "#e7e7e7",
+    "statusBar.background": "#521605",
+    "statusBar.foreground": "#e7e7e7",
+    "statusBarItem.hoverBackground": "#822308",
+    "titleBar.activeBackground": "#521605",
+    "titleBar.activeForeground": "#e7e7e7",
+    "titleBar.inactiveBackground": "#52160599",
+    "titleBar.inactiveForeground": "#e7e7e799"
+  },
+  "peacock.color": "#521605"
 }
