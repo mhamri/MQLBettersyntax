@@ -25,7 +25,7 @@ and put the `MQLBetterSyntax.mqh` in your `include` folder.
 
 # FAQ
 
-### Which langauge are you targeting?
+### Which language are you targeting?
 
 > MQL4
 
@@ -33,4 +33,4 @@ and put the `MQLBetterSyntax.mqh` in your `include` folder.
 
 > donate :dollar: or buy me a coffee :coffee: or help to document :pen: more functions :gear:
 
-> I only document things that I'm using or facing during the code and see a wiggly line.
+> I only document things I am using or facing during the code and see a wiggly line.
