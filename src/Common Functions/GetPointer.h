@@ -6,6 +6,6 @@
  * @return classType* The function returns the object pointer.
  */
 template <class classType>
-classType GetPointer(
+classType *GetPointer(
     // object of any class
     classType anyobject);
