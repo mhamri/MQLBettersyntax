@@ -1,5 +1,3 @@
-
-
 /**
  * @brief Get the Pointer object
  * 
