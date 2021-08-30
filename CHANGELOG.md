@@ -2,3 +2,4 @@
 
 - add type uchar
 - fix bug in GetPointer definition
+- add Symbol()

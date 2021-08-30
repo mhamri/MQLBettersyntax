@@ -429,9 +429,8 @@ and put the `MQLBetterSyntax.mqh` in your `include` folder.
 - [ ] StrToInteger
 - [ ] StrToTime
 - [ ] StructToTime
-- [ ] Symbol
-- [ ] Symbol
-- [ ] SymbolInfoDouble
+- [x] Symbol
+- [x] SymbolInfoDouble
 - [ ] SymbolInfoInteger
 - [ ] SymbolInfoSessionQuote
 - [ ] SymbolInfoSessionTrade
