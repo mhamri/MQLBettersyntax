@@ -357,7 +357,7 @@ and put the `MQLBetterSyntax.mqh` in your `include` folder.
 - [ ] PlaySound
 - [ ] Point
 - [ ] pow
-- [ ] Print
+- [x] Print
 - [ ] PrintFormat
 - [ ] rand
 - [ ] RefreshRates
