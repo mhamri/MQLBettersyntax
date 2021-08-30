@@ -1,4 +1,4 @@
-# MQLsyntax
+# MQLBetterSyntax
 
 An effort to document MQL4 (meta trader)
 
