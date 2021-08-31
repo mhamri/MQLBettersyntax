@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 #include "../types.h"
-#include "../Constants Enumerations Structures/In Out Contants/Code Page Usage.h"
+#include "./ENUM_CP_CodePageUsage.h"
 
 /**
  * @brief It copies and converts part of array of uchar type into a returned string.
