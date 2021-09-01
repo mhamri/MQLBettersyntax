@@ -2,7 +2,7 @@
 #define __MQLBUILD__ 0
 
 //Compiler build number
-#define __MQL4BUILD__0
+#define __MQL4BUILD__ 0
 
 // File compilation date without time (hours, minutes and seconds are equal to 0)
 #define __DATE__ 0

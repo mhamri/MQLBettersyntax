@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 #include "../types.h"
-#include "../Constants Enumerations Structures/In Out Contants/Code Page Usage.h"
+#include "./ENUM_CP_CodePageUsage.h"
 
 /**
  * @brief 
@@ -15,7 +15,7 @@ using namespace std;
  */
 int StringToCharArray(
     string text_string,
-    uchar &array[],
+    uchar *array,
     int start = 0,
     int count = -1,
     ENUM_CP_CodePageUsage codepage = CP_ACP);

@@ -4,7 +4,11 @@
     "*.mq4": "cpp",
     "*.mq5": "cpp",
     "xstring": "cpp",
-    "iostream": "cpp"
+    "iostream": "cpp",
+    "xtr1common": "cpp",
+    "system_error": "cpp",
+    "type_traits": "cpp",
+    "xlocnum": "cpp"
   },
   "workbench.colorCustomizations": {
     "activityBar.activeBackground": "#822308",

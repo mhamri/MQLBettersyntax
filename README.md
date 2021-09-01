@@ -23,6 +23,21 @@ Add this at the top of your `mqh` file
 
 and put the `MQLBetterSyntax.mqh` in your `include` folder.
 
+and wherver you use `stdlib.mqh` or similar places that you need to import from another place
+
+```c
+#ifdef __MQLBUILD__
+#include <stdlib.mqh>
+#else
+#include <MQLBetterSyntax.mqh>
+#endif
+// rest of your includes
+#include "./this-way-of-import.mqh"
+#include <or-this-way-of-import.mqh>
+```
+
+one note about `__MQLBUILD__` that I noticed different files get different version. so some place `__MQLBUILD4__` and `__MQLBUILD5__` is available and someplaces only `__MQLBUILD__` so if you see it's giving error, try the other variation
+
 # FAQ
 
 ### Which language are you targeting?
@@ -138,7 +153,7 @@ and put the `MQLBetterSyntax.mqh` in your `include` folder.
 - [ ] DebugBreak
 - [ ] Digits
 - [ ] DoubleToStr
-- [ ] DoubleToString
+- [x] DoubleToString
 - [ ] EnumToString
 - [ ] EventChartCustom
 - [ ] EventKillTimer
@@ -274,7 +289,7 @@ and put the `MQLBetterSyntax.mqh` in your `include` folder.
 - [ ] log
 - [ ] log10
 - [ ] MarketInfo
-- [ ] MathAbs
+- [x] MathAbs
 - [ ] MathArccos
 - [ ] MathArcsin
 - [ ] MathArctan
@@ -290,7 +305,7 @@ and put the `MQLBetterSyntax.mqh` in your `include` folder.
 - [ ] MathMod
 - [ ] MathPow
 - [ ] MathRand
-- [ ] MathRound
+- [x] MathRound
 - [ ] MathSin
 - [ ] MathSqrt
 - [ ] MathSrand
