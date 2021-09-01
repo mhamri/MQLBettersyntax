@@ -151,7 +151,7 @@ one note about `__MQLBUILD__` that I noticed different files get different versi
 - [ ] DayOfWeek
 - [ ] DayOfYear
 - [ ] DebugBreak
-- [ ] Digits
+- [x] Digits
 - [ ] DoubleToStr
 - [x] DoubleToString
 - [ ] EnumToString
@@ -316,7 +316,7 @@ one note about `__MQLBUILD__` that I noticed different files get different versi
 - [ ] MQLInfoInteger
 - [ ] MQLInfoString
 - [ ] MQLSetInteger
-- [ ] NormalizeDouble
+- [x] NormalizeDouble
 - [ ] ObjectCreate
 - [ ] ObjectDelete
 - [ ] ObjectDescription

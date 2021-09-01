@@ -11,3 +11,5 @@
 - add `MathAbs()`
 - add `MathRound()`
 - add `ArraySize()`
+- add `NormalizeDouble()`
+- add `Digits()`
