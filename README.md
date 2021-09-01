@@ -94,7 +94,7 @@ one note about `__MQLBUILD__` that I noticed different files get different versi
 - [ ] ArrayRange
 - [ ] ArrayResize
 - [ ] ArraySetAsSeries
-- [ ] ArraySize
+- [x] ArraySize
 - [ ] ArraySort
 - [ ] asin
 - [ ] atan

@@ -10,3 +10,4 @@
 - add `DoubleToString()`
 - add `MathAbs()`
 - add `MathRound()`
+- add `ArraySize()`
