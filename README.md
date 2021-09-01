@@ -303,7 +303,7 @@ one note about `__MQLBUILD__` that I noticed different files get different versi
 - [ ] MathMax
 - [ ] MathMin
 - [ ] MathMod
-- [ ] MathPow
+- [x] MathPow
 - [ ] MathRand
 - [x] MathRound
 - [ ] MathSin
@@ -371,7 +371,7 @@ one note about `__MQLBUILD__` that I noticed different files get different versi
 - [ ] PeriodSeconds
 - [ ] PlaySound
 - [ ] Point
-- [ ] pow
+- [x] pow
 - [x] Print
 - [ ] PrintFormat
 - [ ] rand
