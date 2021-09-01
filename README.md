@@ -99,7 +99,7 @@ one note about `__MQLBUILD__` that I noticed different files get different versi
 - [ ] asin
 - [ ] atan
 - [ ] Bars
-- [ ] ceil
+- [x] ceil
 - [x] CharArrayToString
 - [ ] ChartApplyTemplate
 - [ ] ChartClose
@@ -293,7 +293,7 @@ one note about `__MQLBUILD__` that I noticed different files get different versi
 - [ ] MathArccos
 - [ ] MathArcsin
 - [ ] MathArctan
-- [ ] MathCeil
+- [x] MathCeil
 - [ ] MathCos
 - [ ] MathExp
 - [ ] MathFloor
@@ -381,7 +381,7 @@ one note about `__MQLBUILD__` that I noticed different files get different versi
 - [ ] ResourceFree
 - [ ] ResourceReadImage
 - [ ] ResourceSave
-- [ ] round
+- [x] round
 - [ ] Seconds
 - [ ] SendFTP
 - [ ] SendMail
