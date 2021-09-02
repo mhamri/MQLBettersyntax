@@ -13,3 +13,7 @@
 - add `ArraySize()`
 - add `NormalizeDouble()`
 - add `Digits()`
+
+# 2021-09-02
+
+- add `SymbolInfoInteger()`
