@@ -100,6 +100,12 @@ if ( $WhichColor -eq "Green") {
     $runningTerminal = Get-Process -Name "*terminal*"  | where-object { $_.path -match $([regex]::escape($terminalPath)) } | Select-Object  Id, path
     # Stop-Process $runningTerminal.Id
 
+    if ($null -eq $runningTerminal) {
+        
+        Write-Warning ("`n`n`n`tBuild was sucessful ...`n`tBut couldn't find your terminal to refresh it. if you wish to automatically refresh it just keep it open `n`n");
+        
+    }
+
     & $runningTerminal.Path
 
 }
