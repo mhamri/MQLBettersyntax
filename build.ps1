@@ -58,7 +58,7 @@ function Recurse-Folder($folder) {
 
 try {
     Push-Location
-    Set-Location "./src"
+    Set-Location "./src/Mql4"
     $sb = [System.Text.StringBuilder]::new()
     [void]$sb.Append("
 /**
@@ -80,7 +80,7 @@ using namespace std;
 
     [void]$sb.Append((Recurse-Folder "." | Out-String)) 
 
-    $sb.ToString().Trim() -replace "\s+`r?`n\s+`r?`n", "`n`n" | Set-Content "..\MQLBetterSyntax.mqh"
+    $sb.ToString().Trim() -replace "\s+`r?`n\s+`r?`n", "`n`n" | Set-Content "..\MQL4BetterSyntax.mqh"
 }
 catch {
     
