@@ -1,6 +1,6 @@
 # MQLBetterSyntax
 
-An effort to document MQL4 (meta trader)
+An effort to document MQL (meta trader)
 
 # Guide
 
@@ -42,7 +42,7 @@ one note about `__MQLBUILD__` that I noticed different files get different versi
 
 ### Which language are you targeting?
 
-> MQL4
+> atm MQL4, but look like MQL5 can be covered by 90% just by finishing MQL4
 
 ### How can I help?
 
