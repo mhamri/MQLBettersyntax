@@ -8,9 +8,14 @@ work in progress
 
 # usage
 
-Add this at the top of your `mqh` file
+Add this at the top of your `.mqh` file
 
 ```cpp
+#ifdef __INTELLISENSE__
+    // this will remove error on top of #property
+    #pragma diag_suppress 11
+#endif
+
 #ifdef __MQLBUILD__
     #property copyright "Copyright 2021, MetaQuotes Software Corp."
     #property link "https://www.mql5.com"
@@ -23,7 +28,7 @@ Add this at the top of your `mqh` file
 
 and put the `MQLBetterSyntax.mqh` in your `include` folder.
 
-and wherver you use `stdlib.mqh` or similar places that you need to import from another place
+and wherever you use `stdlib.mqh` or similar places that you need to import from another place
 
 ```c
 #ifdef __MQLBUILD__
@@ -77,9 +82,9 @@ one note about `__MQLBUILD__` that I noticed different files get different versi
 - [ ] AccountStopoutMode
 - [ ] acos
 - [ ] Alert
-- [ ] ArrayBsearch
+- [x] ArrayBsearch
 - [ ] ArrayCompare
-- [ ] ArrayCopy
+- [x] ArrayCopy
 - [ ] ArrayCopyRates
 - [ ] ArrayCopySeries
 - [ ] ArrayDimension
@@ -92,10 +97,10 @@ one note about `__MQLBUILD__` that I noticed different files get different versi
 - [ ] ArrayMaximum
 - [ ] ArrayMinimum
 - [ ] ArrayRange
-- [ ] ArrayResize
+- [x] ArrayResize
 - [ ] ArraySetAsSeries
 - [x] ArraySize
-- [ ] ArraySort
+- [x] ArraySort
 - [ ] asin
 - [ ] atan
 - [ ] Bars

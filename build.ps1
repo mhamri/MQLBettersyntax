@@ -28,6 +28,7 @@ function Recurse-Folder($folder) {
     $sb = [System.Text.StringBuilder]::new()
     $directories = Get-ChildItem -Path $folder -Directory
     
+    [void]$sb.Append((Get-FilesContent $folder))
     
     foreach ($directory in $directories) {
         $namespace = "φ" + (Convert-Path $directory | Get-Item | Select-Object Name).Name -replace " ", "_"
@@ -52,7 +53,7 @@ function Recurse-Folder($folder) {
         }    
     }
 
-    [void]$sb.Append((Get-FilesContent $folder))
+    
     return $sb.ToString()
 }
 
@@ -64,7 +65,7 @@ try {
 /**
  * @author Mohammad Hossein Amri (mhamri.com)
  * 
- * @file MQLBetterSyntax.mqh
+ * @file MQL4BetterSyntax.mqh
  * @date $(Get-Date -Format "yyyy-MM-d")
  * 
  * @brief an attempt to document MQL4(MT4) API 
