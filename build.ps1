@@ -80,7 +80,7 @@ using namespace std;
 
     [void]$sb.Append((Recurse-Folder "." | Out-String)) 
 
-    $sb.ToString().Trim() -replace "\s+`r?`n\s+`r?`n", "`n`n" | Set-Content "..\MQL4BetterSyntax.mqh"
+    $sb.ToString().Trim() -replace "\s+`r?`n\s+`r?`n", "`n`n" | Set-Content "..\..\MQL4BetterSyntax.mqh"
 }
 catch {
     
