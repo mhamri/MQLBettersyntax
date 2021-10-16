@@ -1,0 +1,27 @@
+{
+  "files.associations": {
+    "*.mqh": "cpp",
+    "*.mq4": "cpp",
+    "*.mq5": "cpp",
+    "memory": "cpp",
+    "xlocale": "cpp",
+    "xstring": "cpp",
+    "istream": "cpp",
+    "type_traits": "cpp",
+    "xlocnum": "cpp",
+    "cmath": "cpp",
+    "utility": "cpp",
+    "atomic": "cpp",
+    "system_error": "cpp",
+    "iosfwd": "cpp",
+    "ostream": "cpp",
+    "streambuf": "cpp"
+  },
+  // "C_Cpp.errorSquiggles": "Disabled",
+  "cSpell.words": ["MQLBUILD"],
+  "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 4, ColumnLimit: 0}",
+  "[cpp]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+  "prettier.printWidth": 140
+}
