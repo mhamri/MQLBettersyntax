@@ -14,6 +14,8 @@ Add this at the top of your `.mqh` file
 #ifdef __INTELLISENSE__
     // this will remove error on top of #property
     #pragma diag_suppress 11
+    // This remove type conversion squiggly line
+    #pragma diag_suppress 415
 #endif
 
 #ifdef __MQLBUILD__
@@ -98,7 +100,7 @@ one note about `__MQLBUILD__` that I noticed different files get different versi
 - [ ] ArrayMinimum
 - [ ] ArrayRange
 - [x] ArrayResize
-- [ ] ArraySetAsSeries
+- [x] ArraySetAsSeries
 - [x] ArraySize
 - [x] ArraySort
 - [ ] asin
@@ -346,31 +348,31 @@ one note about `__MQLBUILD__` that I noticed different files get different versi
 - [ ] ObjectSetText
 - [ ] ObjectsTotal
 - [ ] ObjectType
-- [ ] OrderClose
-- [ ] OrderCloseBy
-- [ ] OrderClosePrice
-- [ ] OrderCloseTime
-- [ ] OrderComment
-- [ ] OrderCommission
-- [ ] OrderDelete
-- [ ] OrderExpiration
-- [ ] OrderLots
-- [ ] OrderMagicNumber
-- [ ] OrderModify
-- [ ] OrderOpenPrice
-- [ ] OrderOpenTime
-- [ ] OrderPrint
-- [ ] OrderProfit
-- [ ] OrderSelect
+- [x] OrderClose
+- [x] OrderCloseBy
+- [x] OrderClosePrice
+- [x] OrderCloseTime
+- [x] OrderComment
+- [x] OrderCommission
+- [x] OrderDelete
+- [x] OrderExpiration
+- [x] OrderLots
+- [x] OrderMagicNumber
+- [x] OrderModify
+- [x] OrderOpenPrice
+- [x] OrderOpenTime
+- [x] OrderPrint
+- [x] OrderProfit
+- [x] OrderSelect
 - [x] OrderSend
-- [ ] OrdersHistoryTotal
-- [ ] OrderStopLoss
-- [ ] OrdersTotal
-- [ ] OrderSwap
-- [ ] OrderSymbol
-- [ ] OrderTakeProfit
-- [ ] OrderTicket
-- [ ] OrderType
+- [x] OrdersHistoryTotal
+- [x] OrderStopLoss
+- [x] OrdersTotal
+- [x] OrderSwap
+- [x] OrderSymbol
+- [x] OrderTakeProfit
+- [x] OrderTicket
+- [x] OrderType
 - [ ] Period
 - [ ] Period
 - [ ] PeriodSeconds

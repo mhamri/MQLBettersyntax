@@ -1,0 +1,4 @@
+enum ENUM_MODE_ORDER_POOL {
+    MODE_TRADES,
+    MODE_HISTORY,
+};
