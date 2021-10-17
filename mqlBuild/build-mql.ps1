@@ -43,15 +43,6 @@ if (Test-Path $LogFile) {
     Remove-Item $LogFile -Force | Out-Null
 }
 
-#before continue check if the Compile File has any spaces in it...
-# if ($FileToCompile.Contains(" ")) {
-#     "";"";
-#     Write-Host "ERROR!  Impossible to Compile! Your Filename or Path contains SPACES!" -ForegroundColor Red;
-#     "";
-#     Write-Host $FileToCompile -ForegroundColor Red;
-#     "";"";
-#     return;
-# }
 
 #fires up the Metaeditor compiler...
 & "$MetaTraderExecutable" /compile:"$FileToCompile" /log:"$LogFile" /inc:"$IncludeFolder" 
@@ -64,6 +55,9 @@ while (!(Test-Path $LogFile) -and $counter -lt 100) {
 
 $JustTheFileName = Split-Path $FileToCompile -Leaf
 Write-Host "Compiling........: $JustTheFileName`n"
+
+$fileExtension = $JustTheFileName |Split-Path -Extension
+Write-Debug $fileExtension
 
 while ((Test-IsFileLocked $LogFile).IsLocked ) {
     Start-Sleep 1
@@ -92,21 +86,25 @@ $Log | ForEach-Object {
 # Write-Host $WhichColor
 
 $terminalPath = Split-Path $MetaTraderExecutable 
-Write-Host $terminalPath
+Write-Debug $terminalPath
 #get the MT Terminal back if all went well...
 if ( $WhichColor -eq "Green") { 
     Write-Host "`nBuild was successful. Restarting terminal ..." -ForegroundColor $WhichColor
-    #first of all, kill MT Terminal (if running)... otherwise it will not see the new compiled version of the code...
-    $runningTerminal = Get-Process -Name "*terminal*"  | where-object { $_.path -match $([regex]::escape($terminalPath)) } | Select-Object  Id, path
-    # Stop-Process $runningTerminal.Id
 
-    if ($null -eq $runningTerminal) {
-        
-        Write-Warning ("`n`n`n`tBuild was sucessful ...`n`tBut couldn't find your terminal to refresh it. if you wish to automatically refresh it just keep it open `n`n");
-        
+    if (("mq5", ".mq4").contains($fileExtension)){
+        #first of all, kill MT Terminal (if running)... otherwise it will not see the new compiled version of the code...
+        $runningTerminal = Get-Process -Name "*terminal*"  | where-object { $_.path -match $([regex]::escape($terminalPath)) } | Select-Object  Id, path
+        # Stop-Process $runningTerminal.Id
+
+        if ($null -eq $runningTerminal) {
+            
+            Write-Warning ("`n`n`n`tBuild was sucessful ...`n`tBut couldn't find your terminal to refresh it. if you wish to automatically refresh it just keep it open `n`n");
+            
+        }
+
+        & $runningTerminal.Path
     }
-
-    & $runningTerminal.Path
+    
 
 }
 else {
