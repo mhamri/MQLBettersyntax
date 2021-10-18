@@ -103,8 +103,8 @@ one note about `__MQLBUILD__` that I noticed different files get different versi
 - [x] ArraySetAsSeries
 - [x] ArraySize
 - [x] ArraySort
-- [ ] asin
-- [ ] atan
+- [x] asin
+- [x] atan
 - [ ] Bars
 - [x] ceil
 - [x] CharArrayToString
@@ -151,7 +151,7 @@ one note about `__MQLBUILD__` that I noticed different files get different versi
 - [ ] CopyRates
 - [ ] CopyTickVolume
 - [ ] CopyTime
-- [ ] cos
+- [x] cos
 - [ ] CryptDecode
 - [ ] CryptEncode
 - [ ] Day
@@ -205,9 +205,9 @@ one note about `__MQLBUILD__` that I noticed different files get different versi
 - [ ] FileWriteString
 - [ ] FileWriteStruct
 - [ ] floor
-- [ ] fmax
-- [ ] fmin
-- [ ] fmod
+- [x] fmax
+- [x] fmin
+- [x] fmod
 - [ ] FolderClean
 - [ ] FolderCreate
 - [ ] FolderDelete
@@ -293,30 +293,30 @@ one note about `__MQLBUILD__` that I noticed different files get different versi
 - [ ] iTime
 - [ ] iVolume
 - [ ] iWPR
-- [ ] log
-- [ ] log10
+- [x] log
+- [x] log10
 - [ ] MarketInfo
 - [x] MathAbs
-- [ ] MathArccos
-- [ ] MathArcsin
-- [ ] MathArctan
+- [x] MathArccos
+- [x] MathArcsin
+- [x] MathArctan
 - [x] MathCeil
-- [ ] MathCos
-- [ ] MathExp
-- [ ] MathFloor
-- [ ] MathIsValidNumber
-- [ ] MathLog
-- [ ] MathLog10
-- [ ] MathMax
-- [ ] MathMin
-- [ ] MathMod
+- [x] MathCos
+- [x] MathExp
+- [x] MathFloor
+- [x] MathIsValidNumber
+- [x] MathLog
+- [x] MathLog10
+- [x] MathMax
+- [x] MathMin
+- [x] MathMod
 - [x] MathPow
-- [ ] MathRand
+- [x] MathRand
 - [x] MathRound
-- [ ] MathSin
-- [ ] MathSqrt
-- [ ] MathSrand
-- [ ] MathTan
+- [x] MathSin
+- [x] MathSqrt
+- [x] MathSrand
+- [x] MathTan
 - [ ] MessageBox
 - [ ] Minute
 - [ ] Month
@@ -461,7 +461,7 @@ one note about `__MQLBUILD__` that I noticed different files get different versi
 - [ ] SymbolName
 - [ ] SymbolSelect
 - [ ] SymbolsTotal
-- [ ] tan
+- [x] tan
 - [ ] TerminalClose
 - [ ] TerminalCompany
 - [ ] TerminalInfoDouble
